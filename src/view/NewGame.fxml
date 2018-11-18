@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="outerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="827.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NewGameViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="145.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="25.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Spieleranzahl" />
+            <RadioButton fx:id="btn2Player" mnemonicParsing="false" onAction="#on2PlayerSelected" selected="true" text="2 Spieler" GridPane.rowIndex="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="playercount" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="btn3Player" mnemonicParsing="false" onAction="#on3PlayerSelected" text="3 Spieler" toggleGroup="$playercount" GridPane.rowIndex="2" />
+            <RadioButton fx:id="btn4Player" mnemonicParsing="false" onAction="#on4PlayerSelected" text="4 Spieler" toggleGroup="$playercount" GridPane.rowIndex="3" />
+            <Label styleClass="label-with-backGround" text="Spielfeldgröße" GridPane.columnIndex="1" />
+            <Label text="Anzahl Züge" textFill="#e0340d" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="textMaxMoves" maxWidth="150.0" onKeyReleased="#onNewText" styleClass="textField" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin></TextField>
+            <Group GridPane.rowIndex="1" />
+            <Label fx:id="labelGameSize" alignment="CENTER" contentDisplay="BOTTOM" prefHeight="16.0" prefWidth="247.0" text="5 x 5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <buttons>
+                <Button fx:id="btnSmaller" mnemonicParsing="false" onAction="#onSmaller" text="Kleiner" />
+                  <Button fx:id="btnBigger" mnemonicParsing="false" onAction="#onBigger" text="Größer" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="40.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="textPlayer1" onKeyReleased="#onNamePlayer1" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="textPlayer2" onKeyReleased="#onNamePlayer2" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="textPlayer3" onKeyReleased="#onNamePlayer3" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="textPlayer4" onKeyReleased="#onNamePlayer4" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Spielernamen" GridPane.columnIndex="2" />
+            <ComboBox fx:id="boxPlayer1" prefHeight="40.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ComboBox fx:id="boxPlayer2" prefHeight="40.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ComboBox fx:id="boxPlayer3" prefHeight="40.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ComboBox fx:id="boxPlayer4" prefHeight="40.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label text="Spielertyp" GridPane.columnIndex="4" />
+            <ImageView fx:id="imgPlayer4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../assets/player/icons/air.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../assets/player/icons/earth.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../assets/player/icons/fire.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPlayer3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../assets/player/icons/water.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnGameStart" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#btnGameStart" prefHeight="50.0" prefWidth="200.0" text="Spiel starten" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBtnBack" prefHeight="50.0" prefWidth="150.0" text="Zurück" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnImport" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onImport" prefHeight="50.0" prefWidth="169.0" text="Import " GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="labelImportCard" text="Zufällige Karten" />
+            <Label fx:id="labelKarte1" styleClass="label-with-backGround" GridPane.rowIndex="1" />
+            <Label fx:id="labelKarte2" styleClass="label-with-backGround" GridPane.rowIndex="2" />
+            <Label fx:id="labelKarte3" styleClass="label-with-backGround" GridPane.rowIndex="3" />
+            <Label fx:id="labelKarte4" styleClass="label-with-backGround" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

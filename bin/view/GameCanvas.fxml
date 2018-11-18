@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<GridPane fx:id="basePane" stylesheets="@GameCanvas.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GameCanvasViewController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
+   </rowConstraints>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Spiel">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onSaveGame" text="Speichern" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onShowGameStateHistory" text="Spielverlauf anzeigen" />
+                  <SeparatorMenuItem mnemonicParsing="false" />                  
+              <MenuItem mnemonicParsing="false" onAction="#onQuit" text="Beenden" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Einstellungen">
+              <items>
+                  <RadioMenuItem fx:id="toggleRotateGameBoard" mnemonicParsing="false" onAction="#onToggleRotateGameboard" text="Spielfeld drehen" />
+                  <RadioMenuItem fx:id="toggleShowLabels" mnemonicParsing="false" onAction="#onToggleShowLabels" text="Beschriftungen anzeigen" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Hilfe">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onGetHelp" text="Tipp geben" />
+                  <MenuItem mnemonicParsing="false" onAction="#onShowHandbook" text="Anleitung anzeigen" />
+                  	<MenuItem mnemonicParsing="false" onAction="#onUndo" text="Zug zurück" />
+                  		<MenuItem mnemonicParsing="false" onAction="#onRedo" text="Zug vor" />	
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="800.0" prefWidth="800.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <children>
+            <StackPane fx:id="gamePane">
+               <children>
+                  <StackPane fx:id="rotatePane">
+                     <children>
+                        <ImageView fx:id="rotatingBackgroundCanvas" fitHeight="800.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </StackPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

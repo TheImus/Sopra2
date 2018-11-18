@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="748.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MoveHistoryController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="500.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tableGameMoves" editable="false" pickOnBounds="false" prefHeight="156.0" prefWidth="600.0">
+         <columns>
+        	<TableColumn fx:id="columnTurn" editable="false" maxWidth="1.7976931348623157E308" prefWidth="149.0" sortable="false" text="Zug">
+            <cellValueFactory><PropertyValueFactory property="turn" />
+        	</cellValueFactory>
+        	</TableColumn>
+            <TableColumn fx:id="columnPlayer" editable="false" maxWidth="1.7976931348623157E308" prefWidth="149.0" sortable="false" text="Spieler">
+            <cellValueFactory><PropertyValueFactory property="player" />
+        	</cellValueFactory>
+        	</TableColumn>
+            <TableColumn fx:id="columnCard" editable="false" maxWidth="1.7976931348623157E308" prefWidth="149.0" sortable="false" text="Karte">
+            <cellValueFactory><PropertyValueFactory property="card" />
+        	</cellValueFactory>
+        	</TableColumn>
+            <TableColumn fx:id="columnTokenStart" editable="false" maxWidth="1.7976931348623157E308" minWidth="149.0" prefWidth="150.0" sortable="false" text="Token Vorher">
+                        <cellValueFactory><PropertyValueFactory property="startPosition" />
+        	</cellValueFactory>
+        	</TableColumn>
+            <TableColumn fx:id="columnTokenEnd" editable="false" maxWidth="1.7976931348623157E308" prefWidth="149.0" sortable="false" text="Token Nachher">
+            <cellValueFactory><PropertyValueFactory property="endPosition" />
+        	</cellValueFactory>
+        	</TableColumn>
+         </columns>
+      </TableView>
+   </children>
+</GridPane>

@@ -1,0 +1,104 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+.root{
+	
+
+	-fx-background-image: url("/assets/Background/Background.jpg");
+	-fx-background-size: cover;
+}
+
+*{
+	-fx-text-fill: white;
+	-fx-font-size: 12;
+	-fx-font-weight: bold;
+}
+
+.text-field{
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImage.jpg");
+	-fx-border-color: white;
+	-fx-font-size: 17;
+}
+
+.text-field:disabled{
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImageDark.png");
+}
+
+.combo-box{
+	-fx-opacity:1;
+	-fx-border-color: white;
+	-fx-text-fill: red;
+	-fx-background-color: transparent;
+}
+
+.combo-box .list-cell{
+	-fx-opacity:1;
+	-fx-border-color: white;
+	-fx-font-size: 17; 
+	-fx-font-weight: bold; 
+	-fx-text-fill: white;
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImage.jpg");
+}
+
+.combo-box .list-cell:disabled{
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImageDark.png");
+}
+
+
+.button{
+	-fx-opacity:0.8;
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImage.jpg");
+	-fx-border-color: black;
+	-fx-font: 20 bold;
+	-fx-text-fill: white;
+}
+
+.button:hover{
+	-fx-opacity:1;
+}
+
+.button:disabled{
+	-fx-background-image: url("/assets/ButtonIcon/ButtonImageDark.png");
+}
+
+
+.label{
+	-fx-light-text-color: red;
+}
+
+.label-with-backGround{
+	-fx-font-size: 33;
+}
+
+
+
+.table-row-cell{
+  	-fx-background-color: transparent;
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-light-text-color: red;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view{
+	 -fx-background-color: transparent;
+}
+
+
+
+.vBox{
+	-fx-background-image: url("/assets/Background/Background.jpg");
+	-fx-background-size: cover;
+}
